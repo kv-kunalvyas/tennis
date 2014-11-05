@@ -128,7 +128,7 @@ CMAKE_OSX_DEPLOYMENT_TARGET:STRING=
 CMAKE_OSX_SYSROOT:PATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=project
+CMAKE_PROJECT_NAME:STATIC=video
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -204,6 +204,12 @@ project_BINARY_DIR:STATIC=/Users/kunal/Developer/tennis/Source
 
 //Value Computed by CMake
 project_SOURCE_DIR:STATIC=/Users/kunal/Developer/tennis/Source
+
+//Value Computed by CMake
+video_BINARY_DIR:STATIC=/Users/kunal/Developer/tennis/Source
+
+//Value Computed by CMake
+video_SOURCE_DIR:STATIC=/Users/kunal/Developer/tennis/Source
 
 
 ########################

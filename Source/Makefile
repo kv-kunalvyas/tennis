@@ -103,41 +103,41 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named project
+# Target rules for targets named video
 
 # Build rule for target.
-project: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 project
-.PHONY : project
+video: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 video
+.PHONY : video
 
 # fast build rule for target.
-project/fast:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/build
-.PHONY : project/fast
+video/fast:
+	$(MAKE) -f CMakeFiles/video.dir/build.make CMakeFiles/video.dir/build
+.PHONY : video/fast
 
-project.o: project.cpp.o
-.PHONY : project.o
+video.o: video.cpp.o
+.PHONY : video.o
 
 # target to build an object file
-project.cpp.o:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/project.cpp.o
-.PHONY : project.cpp.o
+video.cpp.o:
+	$(MAKE) -f CMakeFiles/video.dir/build.make CMakeFiles/video.dir/video.cpp.o
+.PHONY : video.cpp.o
 
-project.i: project.cpp.i
-.PHONY : project.i
+video.i: video.cpp.i
+.PHONY : video.i
 
 # target to preprocess a source file
-project.cpp.i:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/project.cpp.i
-.PHONY : project.cpp.i
+video.cpp.i:
+	$(MAKE) -f CMakeFiles/video.dir/build.make CMakeFiles/video.dir/video.cpp.i
+.PHONY : video.cpp.i
 
-project.s: project.cpp.s
-.PHONY : project.s
+video.s: video.cpp.s
+.PHONY : video.s
 
 # target to generate assembly for a file
-project.cpp.s:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/project.cpp.s
-.PHONY : project.cpp.s
+video.cpp.s:
+	$(MAKE) -f CMakeFiles/video.dir/build.make CMakeFiles/video.dir/video.cpp.s
+.PHONY : video.cpp.s
 
 # Help Target
 help:
@@ -146,11 +146,11 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
-	@echo "... project"
 	@echo "... rebuild_cache"
-	@echo "... project.o"
-	@echo "... project.i"
-	@echo "... project.s"
+	@echo "... video"
+	@echo "... video.o"
+	@echo "... video.i"
+	@echo "... video.s"
 .PHONY : help
 
 

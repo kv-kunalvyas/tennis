@@ -53,38 +53,38 @@ CMAKE_SOURCE_DIR = /Users/kunal/Developer/tennis/Source
 CMAKE_BINARY_DIR = /Users/kunal/Developer/tennis/Source
 
 #=============================================================================
-# Target rules for target CMakeFiles/project.dir
+# Target rules for target CMakeFiles/video.dir
 
 # All Build rule for target.
-CMakeFiles/project.dir/all:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/depend
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/build
+CMakeFiles/video.dir/all:
+	$(MAKE) -f CMakeFiles/video.dir/build.make CMakeFiles/video.dir/depend
+	$(MAKE) -f CMakeFiles/video.dir/build.make CMakeFiles/video.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /Users/kunal/Developer/tennis/Source/CMakeFiles  1
-	@echo "Built target project"
-.PHONY : CMakeFiles/project.dir/all
+	@echo "Built target video"
+.PHONY : CMakeFiles/video.dir/all
 
 # Include target in all.
-all: CMakeFiles/project.dir/all
+all: CMakeFiles/video.dir/all
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/project.dir/rule: cmake_check_build_system
+CMakeFiles/video.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kunal/Developer/tennis/Source/CMakeFiles 1
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/project.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/video.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kunal/Developer/tennis/Source/CMakeFiles 0
-.PHONY : CMakeFiles/project.dir/rule
+.PHONY : CMakeFiles/video.dir/rule
 
 # Convenience name for target.
-project: CMakeFiles/project.dir/rule
-.PHONY : project
+video: CMakeFiles/video.dir/rule
+.PHONY : video
 
 # clean rule for target.
-CMakeFiles/project.dir/clean:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/clean
-.PHONY : CMakeFiles/project.dir/clean
+CMakeFiles/video.dir/clean:
+	$(MAKE) -f CMakeFiles/video.dir/build.make CMakeFiles/video.dir/clean
+.PHONY : CMakeFiles/video.dir/clean
 
 # clean rule for target.
-clean: CMakeFiles/project.dir/clean
+clean: CMakeFiles/video.dir/clean
 .PHONY : clean
 
 #=============================================================================
