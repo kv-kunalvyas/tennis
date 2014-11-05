@@ -24,7 +24,6 @@ int main(int argc, char* argv[])
     while(!cap.isOpened())
     {
         cout << "Cannot open the video file" << endl;
-        
     }
     
     //get the frames per seconds of the video
@@ -56,4 +55,18 @@ int main(int argc, char* argv[])
     return 0;
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

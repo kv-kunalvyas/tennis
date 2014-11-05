@@ -53,13 +53,48 @@ CMAKE_SOURCE_DIR = /Users/kunal/Developer/tennis/Source
 CMAKE_BINARY_DIR = /Users/kunal/Developer/tennis/Source
 
 #=============================================================================
+# Target rules for target CMakeFiles/person.dir
+
+# All Build rule for target.
+CMakeFiles/person.dir/all:
+	$(MAKE) -f CMakeFiles/person.dir/build.make CMakeFiles/person.dir/depend
+	$(MAKE) -f CMakeFiles/person.dir/build.make CMakeFiles/person.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/kunal/Developer/tennis/Source/CMakeFiles  1
+	@echo "Built target person"
+.PHONY : CMakeFiles/person.dir/all
+
+# Include target in all.
+all: CMakeFiles/person.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/person.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kunal/Developer/tennis/Source/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/person.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kunal/Developer/tennis/Source/CMakeFiles 0
+.PHONY : CMakeFiles/person.dir/rule
+
+# Convenience name for target.
+person: CMakeFiles/person.dir/rule
+.PHONY : person
+
+# clean rule for target.
+CMakeFiles/person.dir/clean:
+	$(MAKE) -f CMakeFiles/person.dir/build.make CMakeFiles/person.dir/clean
+.PHONY : CMakeFiles/person.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/person.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/video.dir
 
 # All Build rule for target.
 CMakeFiles/video.dir/all:
 	$(MAKE) -f CMakeFiles/video.dir/build.make CMakeFiles/video.dir/depend
 	$(MAKE) -f CMakeFiles/video.dir/build.make CMakeFiles/video.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/kunal/Developer/tennis/Source/CMakeFiles  1
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/kunal/Developer/tennis/Source/CMakeFiles  2
 	@echo "Built target video"
 .PHONY : CMakeFiles/video.dir/all
 

@@ -6,3 +6,6 @@ find_package( OpenCV REQUIRED )
 
 add_executable( video video.cpp )
 target_link_libraries( video ${OpenCV_LIBS} )
+
+add_executable( person person.cpp )
+target_link_libraries( person ${OpenCV_LIBS} )
