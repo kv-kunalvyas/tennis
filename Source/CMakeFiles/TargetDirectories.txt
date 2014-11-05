@@ -1,2 +1,0 @@
-/Users/kunal/Developer/tennis/Source/CMakeFiles/person.dir
-/Users/kunal/Developer/tennis/Source/CMakeFiles/video.dir
