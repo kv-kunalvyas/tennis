@@ -7,8 +7,9 @@ using namespace cv;
 int main (int argc, const char * argv[])
 {
     VideoCapture cap("vid2.mp4");
-    cap.set(CV_CAP_PROP_FRAME_WIDTH, 160);
-    cap.set(CV_CAP_PROP_FRAME_HEIGHT, 120);
+    cap.set(CV_CAP_PROP_FRAME_WIDTH, 360);
+    cap.set(CV_CAP_PROP_FRAME_HEIGHT, 240);
+    cap.set(CV_CAP_PROP_FPS, 120);
     if (!cap.isOpened())
         return -1;
     
@@ -23,18 +24,9 @@ int main (int argc, const char * argv[])
         if (!img.data)
             continue;
         
-        /*
-         vector<float> features;
-         hog.compute(img, features);
-         cout << "HOG feature's length is " << hog.getDescriptorSize() << " "  << features.size() << endl;
-         
-         Rect roi(img.cols, 0, img.width, img.height/2);
-         Mat image_roi = inputImage(roi);
-         imshow("result", image_roi);
-         
-         vector<Rect> found, found_filtered;
-         hog.detectMultiScale(image_roi, found, 0, Size(8,8), Size(32,32), 1.05, 1);
-         */
+        vector<Rect> found, found_filtered;
+        hog.detectMultiScale(img, found, 0, Size(16,4), Size(32,32), 10, 1);
+        
         
         size_t i, j;
         for (i=0; i<found.size(); i++)

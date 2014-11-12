@@ -38,7 +38,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /Users/kunal/Developer/tennis/Source
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/kunal/Developer/tennis/Source
+CMAKE_BINARY_DIR = /Users/kunal/Developer/tennis/source
 
 # Include any dependencies generated for this target.
 include CMakeFiles/video.dir/depend.make
@@ -51,7 +51,7 @@ include CMakeFiles/video.dir/flags.make
 
 CMakeFiles/video.dir/video.cpp.o: CMakeFiles/video.dir/flags.make
 CMakeFiles/video.dir/video.cpp.o: video.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/kunal/Developer/tennis/Source/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/kunal/Developer/tennis/source/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/video.dir/video.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/video.dir/video.cpp.o -c /Users/kunal/Developer/tennis/Source/video.cpp
 
@@ -130,6 +130,6 @@ CMakeFiles/video.dir/clean:
 .PHONY : CMakeFiles/video.dir/clean
 
 CMakeFiles/video.dir/depend:
-	cd /Users/kunal/Developer/tennis/Source && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/kunal/Developer/tennis/Source /Users/kunal/Developer/tennis/Source /Users/kunal/Developer/tennis/Source /Users/kunal/Developer/tennis/Source /Users/kunal/Developer/tennis/Source/CMakeFiles/video.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/kunal/Developer/tennis/source && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/kunal/Developer/tennis/Source /Users/kunal/Developer/tennis/Source /Users/kunal/Developer/tennis/source /Users/kunal/Developer/tennis/source /Users/kunal/Developer/tennis/source/CMakeFiles/video.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/video.dir/depend
 
