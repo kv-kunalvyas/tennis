@@ -53,13 +53,83 @@ CMAKE_SOURCE_DIR = /Users/kunal/Developer/tennis/Source
 CMAKE_BINARY_DIR = /Users/kunal/Developer/tennis/source
 
 #=============================================================================
+# Target rules for target CMakeFiles/detectcolor.dir
+
+# All Build rule for target.
+CMakeFiles/detectcolor.dir/all:
+	$(MAKE) -f CMakeFiles/detectcolor.dir/build.make CMakeFiles/detectcolor.dir/depend
+	$(MAKE) -f CMakeFiles/detectcolor.dir/build.make CMakeFiles/detectcolor.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/kunal/Developer/tennis/source/CMakeFiles  1
+	@echo "Built target detectcolor"
+.PHONY : CMakeFiles/detectcolor.dir/all
+
+# Include target in all.
+all: CMakeFiles/detectcolor.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/detectcolor.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kunal/Developer/tennis/source/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/detectcolor.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kunal/Developer/tennis/source/CMakeFiles 0
+.PHONY : CMakeFiles/detectcolor.dir/rule
+
+# Convenience name for target.
+detectcolor: CMakeFiles/detectcolor.dir/rule
+.PHONY : detectcolor
+
+# clean rule for target.
+CMakeFiles/detectcolor.dir/clean:
+	$(MAKE) -f CMakeFiles/detectcolor.dir/build.make CMakeFiles/detectcolor.dir/clean
+.PHONY : CMakeFiles/detectcolor.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/detectcolor.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/optical_flow_demo.dir
+
+# All Build rule for target.
+CMakeFiles/optical_flow_demo.dir/all:
+	$(MAKE) -f CMakeFiles/optical_flow_demo.dir/build.make CMakeFiles/optical_flow_demo.dir/depend
+	$(MAKE) -f CMakeFiles/optical_flow_demo.dir/build.make CMakeFiles/optical_flow_demo.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/kunal/Developer/tennis/source/CMakeFiles  2
+	@echo "Built target optical_flow_demo"
+.PHONY : CMakeFiles/optical_flow_demo.dir/all
+
+# Include target in all.
+all: CMakeFiles/optical_flow_demo.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/optical_flow_demo.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kunal/Developer/tennis/source/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/optical_flow_demo.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kunal/Developer/tennis/source/CMakeFiles 0
+.PHONY : CMakeFiles/optical_flow_demo.dir/rule
+
+# Convenience name for target.
+optical_flow_demo: CMakeFiles/optical_flow_demo.dir/rule
+.PHONY : optical_flow_demo
+
+# clean rule for target.
+CMakeFiles/optical_flow_demo.dir/clean:
+	$(MAKE) -f CMakeFiles/optical_flow_demo.dir/build.make CMakeFiles/optical_flow_demo.dir/clean
+.PHONY : CMakeFiles/optical_flow_demo.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/optical_flow_demo.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/person.dir
 
 # All Build rule for target.
 CMakeFiles/person.dir/all:
 	$(MAKE) -f CMakeFiles/person.dir/build.make CMakeFiles/person.dir/depend
 	$(MAKE) -f CMakeFiles/person.dir/build.make CMakeFiles/person.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/kunal/Developer/tennis/source/CMakeFiles  1
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/kunal/Developer/tennis/source/CMakeFiles  3
 	@echo "Built target person"
 .PHONY : CMakeFiles/person.dir/all
 
@@ -94,7 +164,7 @@ clean: CMakeFiles/person.dir/clean
 CMakeFiles/video.dir/all:
 	$(MAKE) -f CMakeFiles/video.dir/build.make CMakeFiles/video.dir/depend
 	$(MAKE) -f CMakeFiles/video.dir/build.make CMakeFiles/video.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/kunal/Developer/tennis/source/CMakeFiles  2
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/kunal/Developer/tennis/source/CMakeFiles  4
 	@echo "Built target video"
 .PHONY : CMakeFiles/video.dir/all
 

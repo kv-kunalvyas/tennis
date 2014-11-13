@@ -9,3 +9,10 @@ target_link_libraries( video ${OpenCV_LIBS} )
 
 add_executable( person person.cpp )
 target_link_libraries( person ${OpenCV_LIBS} )
+
+add_executable( optical_flow_demo optical_flow_demo.cpp )
+target_link_libraries( optical_flow_demo ${OpenCV_LIBS} )
+
+add_executable( detectcolor detectcolor.cpp )
+target_link_libraries( detectcolor ${OpenCV_LIBS} )
+

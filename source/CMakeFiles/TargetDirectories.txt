@@ -1,2 +1,4 @@
+/Users/kunal/Developer/tennis/source/CMakeFiles/detectcolor.dir
+/Users/kunal/Developer/tennis/source/CMakeFiles/optical_flow_demo.dir
 /Users/kunal/Developer/tennis/source/CMakeFiles/person.dir
 /Users/kunal/Developer/tennis/source/CMakeFiles/video.dir

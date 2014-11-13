@@ -103,6 +103,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named detectcolor
+
+# Build rule for target.
+detectcolor: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 detectcolor
+.PHONY : detectcolor
+
+# fast build rule for target.
+detectcolor/fast:
+	$(MAKE) -f CMakeFiles/detectcolor.dir/build.make CMakeFiles/detectcolor.dir/build
+.PHONY : detectcolor/fast
+
+#=============================================================================
+# Target rules for targets named optical_flow_demo
+
+# Build rule for target.
+optical_flow_demo: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 optical_flow_demo
+.PHONY : optical_flow_demo
+
+# fast build rule for target.
+optical_flow_demo/fast:
+	$(MAKE) -f CMakeFiles/optical_flow_demo.dir/build.make CMakeFiles/optical_flow_demo.dir/build
+.PHONY : optical_flow_demo/fast
+
+#=============================================================================
 # Target rules for targets named person
 
 # Build rule for target.
@@ -127,6 +153,54 @@ video: cmake_check_build_system
 video/fast:
 	$(MAKE) -f CMakeFiles/video.dir/build.make CMakeFiles/video.dir/build
 .PHONY : video/fast
+
+detectcolor.o: detectcolor.cpp.o
+.PHONY : detectcolor.o
+
+# target to build an object file
+detectcolor.cpp.o:
+	$(MAKE) -f CMakeFiles/detectcolor.dir/build.make CMakeFiles/detectcolor.dir/detectcolor.cpp.o
+.PHONY : detectcolor.cpp.o
+
+detectcolor.i: detectcolor.cpp.i
+.PHONY : detectcolor.i
+
+# target to preprocess a source file
+detectcolor.cpp.i:
+	$(MAKE) -f CMakeFiles/detectcolor.dir/build.make CMakeFiles/detectcolor.dir/detectcolor.cpp.i
+.PHONY : detectcolor.cpp.i
+
+detectcolor.s: detectcolor.cpp.s
+.PHONY : detectcolor.s
+
+# target to generate assembly for a file
+detectcolor.cpp.s:
+	$(MAKE) -f CMakeFiles/detectcolor.dir/build.make CMakeFiles/detectcolor.dir/detectcolor.cpp.s
+.PHONY : detectcolor.cpp.s
+
+optical_flow_demo.o: optical_flow_demo.cpp.o
+.PHONY : optical_flow_demo.o
+
+# target to build an object file
+optical_flow_demo.cpp.o:
+	$(MAKE) -f CMakeFiles/optical_flow_demo.dir/build.make CMakeFiles/optical_flow_demo.dir/optical_flow_demo.cpp.o
+.PHONY : optical_flow_demo.cpp.o
+
+optical_flow_demo.i: optical_flow_demo.cpp.i
+.PHONY : optical_flow_demo.i
+
+# target to preprocess a source file
+optical_flow_demo.cpp.i:
+	$(MAKE) -f CMakeFiles/optical_flow_demo.dir/build.make CMakeFiles/optical_flow_demo.dir/optical_flow_demo.cpp.i
+.PHONY : optical_flow_demo.cpp.i
+
+optical_flow_demo.s: optical_flow_demo.cpp.s
+.PHONY : optical_flow_demo.s
+
+# target to generate assembly for a file
+optical_flow_demo.cpp.s:
+	$(MAKE) -f CMakeFiles/optical_flow_demo.dir/build.make CMakeFiles/optical_flow_demo.dir/optical_flow_demo.cpp.s
+.PHONY : optical_flow_demo.cpp.s
 
 person.o: person.cpp.o
 .PHONY : person.o
@@ -182,10 +256,18 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... detectcolor"
 	@echo "... edit_cache"
+	@echo "... optical_flow_demo"
 	@echo "... person"
 	@echo "... rebuild_cache"
 	@echo "... video"
+	@echo "... detectcolor.o"
+	@echo "... detectcolor.i"
+	@echo "... detectcolor.s"
+	@echo "... optical_flow_demo.o"
+	@echo "... optical_flow_demo.i"
+	@echo "... optical_flow_demo.s"
 	@echo "... person.o"
 	@echo "... person.i"
 	@echo "... person.s"
