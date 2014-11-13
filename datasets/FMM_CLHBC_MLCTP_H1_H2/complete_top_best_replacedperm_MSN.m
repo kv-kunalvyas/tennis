@@ -1,0 +1,406 @@
+function [nMM nST nCC Conf InD] = complete_top_best_replacedperm_MSN(Topologies,Train_Seq,Test_Seq,permuts,st)
+
+
+m=1;c=1;
+
+EV = {' 1';' 2';' 3';' 4';' 5';' 6';' 7';' 8';' 9';'10';'11'};
+EV_MSN = {'MSN_Home';'MSN_News_ALL';'MSN_News_Local';'MSN_News_Weather';...
+    'MSN_News_Business';'MSN_News_Sports';'MSN_Interests_Health';...
+    'MSN_Interests_Living';'MSN_Interests_Tech';'MSN_Interests_Travel';'MSN_Others'};
+Conf=zeros(11,11);
+  
+
+    Transition_Matrix = Topologies.TM;
+    
+    
+    Final_from_Topology = zeros(11,11);
+    for CjD=1:20
+        BJB = Transition_Matrix(1,:);
+        BBBB=BJB(randperm(length(BJB)));
+        [ccccc dddd] = max(BBBB);
+        if dddd==1
+                Final_from_Topology(1,:) = BBBB;
+                break
+        else 
+            continue
+        end
+    end
+    
+    for CjD=1:20
+        BJB = Transition_Matrix(2,:);
+        BBBB=BJB(randperm(length(BJB)));
+        [ccccc dddd] = max(BBBB);
+        if dddd==2
+                Final_from_Topology(2,:) = BBBB;
+                break
+        else 
+            continue
+        end
+    end
+    
+    for CjD=1:20
+        BJB = Transition_Matrix(3,:);
+        BBBB=BJB(randperm(length(BJB)));
+        [ccccc dddd] = max(BBBB);
+        if dddd==3
+                Final_from_Topology(3,:) = BBBB;
+                break
+        else 
+            continue
+        end
+    end
+    
+    for CjD=1:20
+        BJB = Transition_Matrix(4,:);
+        BBBB=BJB(randperm(length(BJB)));
+        [ccccc dddd] = max(BBBB);
+        if dddd==4
+                Final_from_Topology(4,:) = BBBB;
+                break
+        else 
+            continue
+        end
+    end
+    
+    for CjD=1:20
+        BJB = Transition_Matrix(5,:);
+        BBBB=BJB(randperm(length(BJB)));
+        [ccccc dddd] = max(BBBB);
+        if dddd==5
+                Final_from_Topology(5,:) = BBBB;
+                break
+        else 
+            continue
+        end
+    end
+    
+    for CjD=1:20
+        BJB = Transition_Matrix(6,:);
+        BBBB=BJB(randperm(length(BJB)));
+        [ccccc dddd] = max(BBBB);
+        if dddd==6
+                Final_from_Topology(6,:) = BBBB;
+                break
+        else 
+            continue
+        end
+    end
+    
+    for CjD=1:20
+        BJB = Transition_Matrix(7,:);
+        BBBB=BJB(randperm(length(BJB)));
+        [ccccc dddd] = max(BBBB);
+        if dddd==7
+                Final_from_Topology(7,:) = BBBB;
+                break
+        else 
+            continue
+        end
+    end
+    
+    for CjD=1:20
+        BJB = Transition_Matrix(8,:);
+        BBBB=BJB(randperm(length(BJB)));
+        [ccccc dddd] = max(BBBB);
+        if dddd==8
+                Final_from_Topology(8,:) = BBBB;
+                break
+        else 
+            continue
+        end
+    end
+    
+    for CjD=1:20
+        BJB = Transition_Matrix(9,:);
+        BBBB=BJB(randperm(length(BJB)));
+        [ccccc dddd] = max(BBBB);
+        if dddd==9
+                Final_from_Topology(9,:) = BBBB;
+                break
+        else 
+            continue
+        end
+    end
+    
+    
+    for CjD=1:20
+        BJB = Transition_Matrix(10,:);
+        BBBB=BJB(randperm(length(BJB)));
+        [ccccc dddd] = max(BBBB);
+        if dddd==10
+                Final_from_Topology(10,:) = BBBB;
+                break
+        else 
+            continue
+        end
+    end
+    
+    for CjD=1:20
+        BJB = Transition_Matrix(11,:);
+        BBBB=BJB(randperm(length(BJB)));
+        [ccccc dddd] = max(BBBB);
+        if dddd==11
+                Final_from_Topology(11,:) = BBBB;
+                break
+        else 
+            continue
+        end
+    end
+    
+%     Final_from_Topology(2,2) = max(Transition_Matrix(2,:));
+%     Final_from_Topology(3,3) = max(Transition_Matrix(3,:));
+%     Final_from_Topology(4,4) = max(Transition_Matrix(4,:));
+%     Final_from_Topology(5,5) = max(Transition_Matrix(5,:));
+%     Final_from_Topology(6,6) = max(Transition_Matrix(6,:));
+%     Final_from_Topology(7,7) = max(Transition_Matrix(7,:));
+%     Final_from_Topology(8,8) = max(Transition_Matrix(8,:));
+%     Final_from_Topology(9,9) = max(Transition_Matrix(9,:));
+%     Final_from_Topology(10,10) = max(Transition_Matrix(10,:));
+%     Final_from_Topology(11,11) = max(Transition_Matrix(11,:));
+    
+    
+    %max of each row
+    
+    
+    
+    
+    
+for iter = st:length(Train_Seq) %REMOVE -47 for complete %replace with start with 1 for complete        
+    l=1;
+             for i=1:length(Train_Seq)-iter+1 %replace with i:length(Vocabulary)-n-iter+1 for complete
+                Train_S=Train_Seq(i:i+iter-1,:);
+                [cz Train_T1]=MSN_test_CLHBC(Train_S);
+                          ccc=1;     
+                    nonzero_indices=find(Transition_Matrix>0);  
+                    if length(nonzero_indices)<5
+                        break
+                    end
+                    AJS=Train_T1;
+                    train_indices=find(AJS>0);
+                          if factorial(length(nonzero_indices))<10
+                              LI=factorial(length(nonzero_indices));
+                              
+                          else
+                              LI=10;
+                              
+                          end
+                          
+                          TTTM=zeros(1,length(nonzero_indices));
+                          
+                  for cm=1:LI;
+                       TTTM(cm,:)=nonzero_indices(randperm(length(find(Transition_Matrix>0))));
+                  end
+                  
+                  TTTM=unique(TTTM,'rows');
+                       
+                      sizeofTTTM=size(TTTM);
+                      JS_Distance=zeros(1,sizeofTTTM(1));
+              for permutations=1:sizeofTTTM(1)
+                  TTT=TTTM(permutations,:);
+                  
+                  %Transition_Matrix2(nonzero_indices(randperm(length(nonzero_indices))))=Transition_Matrix(nonzero_indices);
+                    
+                 
+                  Transition_Matrix2=zeros(11,11);
+                  if length(nonzero_indices)>length(TTT)
+                      Transition_Matrix2(TTT(1:length(nonzero_indices)-(length(nonzero_indices)-length(TTT))))=Transition_Matrix(nonzero_indices(1:length(nonzero_indices)-(length(nonzero_indices)-length(TTT))));
+                  else
+                      Transition_Matrix2(TTT(1:length(nonzero_indices)))=Transition_Matrix(nonzero_indices);
+                  end
+                  BJS{permutations}=Transition_Matrix2;
+                  clear Transition_Matrix2  
+                    JS_Distance(ccc)=(abs(KLDiv(AJS(:)',BJS{permutations}(:)'))+abs(KLDiv(AJS(:)',BJS{permutations}(:)')))/2;
+                    ccc=ccc+1; 
+                end
+                
+                [~, InD]=min(JS_Distance);
+
+                 Train_T.TM=BJS{InD};
+                
+                %A = Train_T.TM
+                
+               % A = Final_from_Topology
+                
+               % save MSN_MLCTP.mat A
+               load MSN_MLCTP.mat
+               
+                    Ts=zeros(11,11);
+        k=0;
+        
+        sfl=0; sfr=0; snl=0; snr=0; hf=0; hn=0; bin=0; bif=0; bon=0; bof=0;
+        binsl=0;
+        
+        for j=1:length(Test_Seq)-1
+            Ts=zeros(11,11);
+            if strcmp(Test_Seq{j},' 1')
+                Ts = A;
+                [Se,St] = hmmgenerate(1,Ts,[1 1 1 1 1 1 1 1 1 1 1]','Statenames',EV);
+                NNN=strfind(EV,char(Test_Seq{j+1})); iidn=find(~cellfun(@isempty,NNN)>0);
+                MMM=strfind(EV,char(St)); iid=find(~cellfun(@isempty,MMM)>0);
+                if strcmp(St,Test_Seq{j+1}), Conf(1,1)=Conf(1,1)+1; k=k+1; sfl=sfl+1; else Conf(iidn,iid)=Conf(iidn,iid)+1; end
+                
+            elseif strcmp(Test_Seq{j},' 2')
+                Ts(1,:) = A(2,:);
+                [Se,St] = hmmgenerate(1,Ts,[1 1 1 1 1 1 1 1 1 1 1]','Statenames',EV);
+                NNN=strfind(EV,char(Test_Seq{j+1})); iidn=find(~cellfun(@isempty,NNN)>0);
+                MMM=strfind(EV,char(St)); iid=find(~cellfun(@isempty,MMM)>0);
+                if strcmp(St,Test_Seq{j+1}), Conf(2,2)=Conf(2,2)+1; k=k+1; sfr=sfr+1;  else Conf(iidn,iid)=Conf(iidn,iid)+1; end
+                         
+            elseif strcmp(Test_Seq{j},' 3')
+                Ts(1,:) = A(3,:);
+                [Se,St] = hmmgenerate(1,Ts,[1 1 1 1 1 1 1 1 1 1 1]','Statenames',EV);
+                NNN=strfind(EV,char(Test_Seq{j+1})); iidn=find(~cellfun(@isempty,NNN)>0);
+                MMM=strfind(EV,char(St)); iid=find(~cellfun(@isempty,MMM)>0);
+                if strcmp(St,Test_Seq{j+1}), Conf(3,3)=Conf(3,3)+1; k=k+1; snl=snl+1;  else Conf(iidn,iid)=Conf(iidn,iid)+1; end
+                         
+            elseif strcmp(Test_Seq{j},' 4')
+                Ts(1,:) = A(4,:);
+                [Se,St] = hmmgenerate(1,Ts,[1 1 1 1 1 1 1 1 1 1 1]','Statenames',EV);
+                NNN=strfind(EV,char(Test_Seq{j+1})); iidn=find(~cellfun(@isempty,NNN)>0);
+                MMM=strfind(EV,char(St)); iid=find(~cellfun(@isempty,MMM)>0);
+                if strcmp(St,Test_Seq{j+1}), Conf(4,4)=Conf(4,4)+1; k=k+1; snr=snr+1;  else Conf(iidn,iid)=Conf(iidn,iid)+1; end
+                         
+            elseif strcmp(Test_Seq{j},' 5')
+                Ts(1,:) = A(5,:);
+                [Se,St] = hmmgenerate(1,Ts,[1 1 1 1 1 1 1 1 1 1 1]','Statenames',EV);
+                NNN=strfind(EV,char(Test_Seq{j+1})); iidn=find(~cellfun(@isempty,NNN)>0);
+                MMM=strfind(EV,char(St)); iid=find(~cellfun(@isempty,MMM)>0);
+                if strcmp(St,Test_Seq{j+1}), Conf(5,5)=Conf(5,5)+1; k=k+1; hf=hf+1;  else Conf(iidn,iid)=Conf(iidn,iid)+1; end
+                
+            elseif strcmp(Test_Seq{j},' 6')
+                Ts(1,:) = A(6,:);
+                [Se,St] = hmmgenerate(1,Ts,[1 1 1 1 1 1 1 1 1 1 1]','Statenames',EV);
+                NNN=strfind(EV,char(Test_Seq{j+1})); iidn=find(~cellfun(@isempty,NNN)>0);
+                MMM=strfind(EV,char(St)); iid=find(~cellfun(@isempty,MMM)>0);
+                if strcmp(St,Test_Seq{j+1}), Conf(6,6)=Conf(6,6)+1;k=k+1; hn=hn+1;  else Conf(iidn,iid)=Conf(iidn,iid)+1; end
+                
+            elseif strcmp(Test_Seq{j},' 7')
+                Ts(1,:) = A(7,:);
+                [Se,St] = hmmgenerate(1,Ts,[1 1 1 1 1 1 1 1 1 1 1]','Statenames',EV);
+                NNN=strfind(EV,char(Test_Seq{j+1})); iidn=find(~cellfun(@isempty,NNN)>0);
+                MMM=strfind(EV,char(St)); iid=find(~cellfun(@isempty,MMM)>0);
+                if strcmp(St,Test_Seq{j+1}),Conf(7,7)=Conf(7,7)+1; k=k+1; bin=bin+1;  else Conf(iidn,iid)=Conf(iidn,iid)+1; end
+                
+            elseif strcmp(Test_Seq{j},' 8')
+                Ts(1,:) = A(8,:);
+                [Se,St] = hmmgenerate(1,Ts,[1 1 1 1 1 1 1 1 1 1 1]','Statenames',EV);
+                NNN=strfind(EV,char(Test_Seq{j+1})); iidn=find(~cellfun(@isempty,NNN)>0);
+                MMM=strfind(EV,char(St)); iid=find(~cellfun(@isempty,MMM)>0);
+                if strcmp(St,Test_Seq{j+1}),Conf(8,8)=Conf(8,8)+1; k=k+1; bif=bif+1;  else Conf(iidn,iid)=Conf(iidn,iid)+1; end
+            
+            
+            elseif strcmp(Test_Seq{j},' 9')
+                Ts(1,:) = A(9,:);
+                [Se,St] = hmmgenerate(1,Ts,[1 1 1 1 1 1 1 1 1 1 1]','Statenames',EV);
+                NNN=strfind(EV,char(Test_Seq{j+1})); iidn=find(~cellfun(@isempty,NNN)>0);
+                MMM=strfind(EV,char(St)); iid=find(~cellfun(@isempty,MMM)>0);
+                if strcmp(St,Test_Seq{j+1}),Conf(9,9)=Conf(9,9)+1; k=k+1; bon=bon+1;  else Conf(iidn,iid)=Conf(iidn,iid)+1; end
+                         
+            elseif strcmp(Test_Seq{j},'10')
+                Ts(1,:) = A(10,:);
+                [Se,St] = hmmgenerate(1,Ts,[1 1 1 1 1 1 1 1 1 1 1]','Statenames',EV);
+                NNN=strfind(EV,char(Test_Seq{j+1})); iidn=find(~cellfun(@isempty,NNN)>0);
+                MMM=strfind(EV,char(St)); iid=find(~cellfun(@isempty,MMM)>0);
+                if strcmp(St,Test_Seq{j+1}),Conf(10,10)=Conf(10,10)+1; k=k+1; bof=bof+1;  else Conf(iidn,iid)=Conf(iidn,iid)+1; end
+                         
+            elseif strcmp(Test_Seq{j},'11')
+                Ts(1,:) = A(11,:);
+                [Se,St] = hmmgenerate(1,Ts,[1 1 1 1 1 1 1 1 1 1 1]','Statenames',EV);
+                NNN=strfind(EV,char(Test_Seq{j+1})); iidn=find(~cellfun(@isempty,NNN)>0);
+                MMM=strfind(EV,char(St)); iid=find(~cellfun(@isempty,MMM)>0);
+                if strcmp(St,Test_Seq{j+1}),Conf(11,11)=Conf(11,11)+1; k=k+1; binsl=binsl+1;  else Conf(iidn,iid)=Conf(iidn,iid)+1; end
+                         
+            
+            end
+        end
+        
+        SFL = strfind(Test_Seq,' 1');
+        SFR = strfind(Test_Seq,' 2');
+        SNL = strfind(Test_Seq,' 3');
+        SNR = strfind(Test_Seq,' 4');
+        
+        HF = strfind(Test_Seq,' 5');
+        HN = strfind(Test_Seq,' 6');
+        
+        BIN = strfind(Test_Seq,' 7');
+        BIF = strfind(Test_Seq,' 8');
+        BON = strfind(Test_Seq,' 9');
+        BOF = strfind(Test_Seq,'10');
+        
+        BINSL = strfind(Test_Seq,'11');
+        
+        L_SFL = length(SFL(~cellfun(@isempty,SFL)));
+        L_SFR = length(SFR(~cellfun(@isempty,SFR)));
+        L_SNL = length(SNL(~cellfun(@isempty,SNL)));
+        L_SNR = length(SNR(~cellfun(@isempty,SNR)));
+        
+        L_HF = length(HF(~cellfun(@isempty,HF)));
+        L_HN = length(HN(~cellfun(@isempty,HN)));
+        
+        L_BIN = length(BIN(~cellfun(@isempty,BIN)));
+        L_BIF = length(BIF(~cellfun(@isempty,BIF)));
+        L_BON = length(BON(~cellfun(@isempty,BON)));
+        L_BOF = length(BOF(~cellfun(@isempty,BOF)));
+        
+        L_BINSL = length(BINSL(~cellfun(@isempty,BINSL)));
+        
+        if sfl>0 Serve_Far_Left{iter}(i) = sfl/L_SFL * 100; else Serve_Far_Left{iter}(i)=0; end
+        if sfr>0 Serve_Far_Right{iter}(i) = sfr/L_SFR * 100; else Serve_Far_Right{iter}(i)=0; end
+        if snl>0 Serve_Near_Left{iter}(i) = snl/L_SNL * 100; else Serve_Near_Left{iter}(i)=0; end
+        if snr>0 Serve_Near_Right{iter}(i) = snr/L_SNR * 100; else Serve_Near_Right{iter}(i)=0; end
+        
+        if hf>0 Hit_Far{iter}(i) = hf/L_HF * 100; else Hit_Far{iter}(i)=0; end
+        if hn>0 Hit_Near{iter}(i) = hn/L_HN * 100; else Hit_Near{iter}(i)=0; end
+        
+        if bin>0 BI_Near{iter}(i) = bin/L_BIN * 100; else BI_Near{iter}(i)=0;  end
+        if bif>0 BI_Far{iter}(i) = bif/L_BIF * 100; else BI_Far{iter}(i)=0;  end
+        if bon>0 BO_Near{iter}(i) = bon/L_BON * 100; else BO_Near{iter}(i)=0; end
+        if bof>0 BO_Far{iter}(i) = bof/L_BOF * 100; else BO_Far{iter}(i)=0;  end
+        
+        if binsl>0 BI_Near_SL{iter}(i) = binsl/L_BINSL * 100; else BI_Near_SL{iter}(i)=0;  end
+        
+        clear sfl sfr snl snr hf hn bif bin bof bon binsl bifsl L_SFL L_SFR L_SNL L_SNR L_HF L_HN L_BIF L_BIN L_BOF L_BON L_BINSL 
+        
+        Sim(i) = k/(length(Test_Seq)-1);
+        
+        Individual_Accuracy = [mean(Serve_Far_Left{iter}(i)) mean(Serve_Far_Right{iter}(i)) mean(Serve_Near_Left{iter}(i)) mean(Serve_Near_Right{iter}(i))...
+            mean(Hit_Far{iter}(i)) mean(Hit_Near{iter}(i)) mean(BI_Near{iter}(i)) mean(BI_Far{iter}(i)) mean(BO_Near{iter}(i)) mean(BO_Far{iter}(i)) ...
+            mean(BI_Near_SL{iter}(i))];
+        
+        Mean_Accuracy{c}(l) = mean(Individual_Accuracy);
+        l=l+1;
+      
+             end
+    if length(nonzero_indices)<5
+                        break
+                    end
+    c=c+1;
+    
+    SSFFLL(m)=mean(Serve_Far_Left{iter});
+    SSFFRR(m)=mean(Serve_Far_Right{iter});
+    SSNNLL(m)=mean(Serve_Near_Left{iter});
+    SSNNRR(m)=mean(Serve_Near_Right{iter});
+    
+    HHFF(m)=mean(Hit_Far{iter});
+    HHNN(m)=mean(Hit_Near{iter});
+    
+    BBIINN(m)=mean(BI_Near{iter});
+    BBIIFF(m)=mean(BI_Far{iter});
+    BBOONN(m)=mean(BO_Near{iter});
+    BBOOFF(m)=mean(BO_Far{iter});
+    
+    BBIINNSSLL(m)=mean(BI_Near_SL{iter});
+    m=m+1;
+end
+if length(nonzero_indices)<5
+                        nCC=0;
+                        nMM=0;nST=0;Conf=0;
+else
+nCC = [mean(SSFFLL); mean(SSFFRR); mean(SSNNLL); mean(SSNNRR); mean(HHFF); mean(HHNN); mean(BBIINN); mean(BBIIFF); mean(BBOONN); mean(BBOOFF); mean(BBIINNSSLL)]';
+
+for i=1:length(Mean_Accuracy)
+    nMM(i)=mean(Mean_Accuracy{i});
+    nST(i)=std(Mean_Accuracy{i});
+end
+Conf=mat2tmat(Conf);
+end
