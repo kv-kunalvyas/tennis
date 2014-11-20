@@ -49,7 +49,10 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/detectcolor.dir/DependInfo.cmake"
+  "CMakeFiles/motiontracking.dir/DependInfo.cmake"
   "CMakeFiles/optical_flow_demo.dir/DependInfo.cmake"
+  "CMakeFiles/opticalflow.dir/DependInfo.cmake"
   "CMakeFiles/person.dir/DependInfo.cmake"
   "CMakeFiles/video.dir/DependInfo.cmake"
+  "CMakeFiles/videotracking.dir/DependInfo.cmake"
   )

@@ -7,8 +7,6 @@ using namespace cv;
 int main (int argc, const char * argv[])
 {
     VideoCapture cap("vid2.mp4");
-    cap.set(CV_CAP_PROP_FRAME_WIDTH, 360);
-    cap.set(CV_CAP_PROP_FRAME_HEIGHT, 240);
     cap.set(CV_CAP_PROP_FPS, 120);
     if (!cap.isOpened())
         return -1;
@@ -24,32 +22,26 @@ int main (int argc, const char * argv[])
         if (!img.data)
             continue;
         
+        //Dimesion of the video is 640 X 360
+        Mat roi = img(Rect(160, 140, 320, 160));
+        rectangle(img, Point(160,140), Point(480,300), 255, 0, 255);
+        
         vector<Rect> found, found_filtered;
-        hog.detectMultiScale(img, found, 0, Size(16,4), Size(32,32), 10, 1);
+        hog.detectMultiScale(roi, found, 0, Size(1,1), Size(1,1), 1, 1);
         
-        
-        size_t i, j;
-        for (i=0; i<found.size(); i++)
+        for (size_t i = 0; i < found.size(); i++)
         {
             Rect r = found[i];
-            for (j=0; j<found.size(); j++)
-                if (j!=i && (r & found[j])==r)
-                    break;
-            if (j==found.size())
-                found_filtered.push_back(r);
+            rectangle(roi, r.tl(), r.br(), CV_RGB(0, 255, 0), 1);
+            
         }
-        for (i=0; i<found_filtered.size(); i++)
-        {
-            Rect r = found_filtered[i];
-            r.x += cvRound(r.width*0.1);
-            r.width = cvRound(r.width*0.8);
-            r.y += cvRound(r.height*0.06);
-            r.height = cvRound(r.height*0.9);
-            rectangle(img, r.tl(), r.br(), cv::Scalar(0,255,0), 1);
-        }
+        
+
+        
         imshow("video capture", img);
-        if (waitKey(20) >= 0)
+        if (waitKey(2) >= 0){
             break;
+        }
     }
     return 0;
 }

@@ -116,6 +116,19 @@ detectcolor/fast:
 .PHONY : detectcolor/fast
 
 #=============================================================================
+# Target rules for targets named motiontracking
+
+# Build rule for target.
+motiontracking: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 motiontracking
+.PHONY : motiontracking
+
+# fast build rule for target.
+motiontracking/fast:
+	$(MAKE) -f CMakeFiles/motiontracking.dir/build.make CMakeFiles/motiontracking.dir/build
+.PHONY : motiontracking/fast
+
+#=============================================================================
 # Target rules for targets named optical_flow_demo
 
 # Build rule for target.
@@ -127,6 +140,19 @@ optical_flow_demo: cmake_check_build_system
 optical_flow_demo/fast:
 	$(MAKE) -f CMakeFiles/optical_flow_demo.dir/build.make CMakeFiles/optical_flow_demo.dir/build
 .PHONY : optical_flow_demo/fast
+
+#=============================================================================
+# Target rules for targets named opticalflow
+
+# Build rule for target.
+opticalflow: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 opticalflow
+.PHONY : opticalflow
+
+# fast build rule for target.
+opticalflow/fast:
+	$(MAKE) -f CMakeFiles/opticalflow.dir/build.make CMakeFiles/opticalflow.dir/build
+.PHONY : opticalflow/fast
 
 #=============================================================================
 # Target rules for targets named person
@@ -154,6 +180,19 @@ video/fast:
 	$(MAKE) -f CMakeFiles/video.dir/build.make CMakeFiles/video.dir/build
 .PHONY : video/fast
 
+#=============================================================================
+# Target rules for targets named videotracking
+
+# Build rule for target.
+videotracking: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 videotracking
+.PHONY : videotracking
+
+# fast build rule for target.
+videotracking/fast:
+	$(MAKE) -f CMakeFiles/videotracking.dir/build.make CMakeFiles/videotracking.dir/build
+.PHONY : videotracking/fast
+
 detectcolor.o: detectcolor.cpp.o
 .PHONY : detectcolor.o
 
@@ -178,6 +217,30 @@ detectcolor.cpp.s:
 	$(MAKE) -f CMakeFiles/detectcolor.dir/build.make CMakeFiles/detectcolor.dir/detectcolor.cpp.s
 .PHONY : detectcolor.cpp.s
 
+motiontracking.o: motiontracking.cpp.o
+.PHONY : motiontracking.o
+
+# target to build an object file
+motiontracking.cpp.o:
+	$(MAKE) -f CMakeFiles/motiontracking.dir/build.make CMakeFiles/motiontracking.dir/motiontracking.cpp.o
+.PHONY : motiontracking.cpp.o
+
+motiontracking.i: motiontracking.cpp.i
+.PHONY : motiontracking.i
+
+# target to preprocess a source file
+motiontracking.cpp.i:
+	$(MAKE) -f CMakeFiles/motiontracking.dir/build.make CMakeFiles/motiontracking.dir/motiontracking.cpp.i
+.PHONY : motiontracking.cpp.i
+
+motiontracking.s: motiontracking.cpp.s
+.PHONY : motiontracking.s
+
+# target to generate assembly for a file
+motiontracking.cpp.s:
+	$(MAKE) -f CMakeFiles/motiontracking.dir/build.make CMakeFiles/motiontracking.dir/motiontracking.cpp.s
+.PHONY : motiontracking.cpp.s
+
 optical_flow_demo.o: optical_flow_demo.cpp.o
 .PHONY : optical_flow_demo.o
 
@@ -201,6 +264,30 @@ optical_flow_demo.s: optical_flow_demo.cpp.s
 optical_flow_demo.cpp.s:
 	$(MAKE) -f CMakeFiles/optical_flow_demo.dir/build.make CMakeFiles/optical_flow_demo.dir/optical_flow_demo.cpp.s
 .PHONY : optical_flow_demo.cpp.s
+
+opticalflow.o: opticalflow.cpp.o
+.PHONY : opticalflow.o
+
+# target to build an object file
+opticalflow.cpp.o:
+	$(MAKE) -f CMakeFiles/opticalflow.dir/build.make CMakeFiles/opticalflow.dir/opticalflow.cpp.o
+.PHONY : opticalflow.cpp.o
+
+opticalflow.i: opticalflow.cpp.i
+.PHONY : opticalflow.i
+
+# target to preprocess a source file
+opticalflow.cpp.i:
+	$(MAKE) -f CMakeFiles/opticalflow.dir/build.make CMakeFiles/opticalflow.dir/opticalflow.cpp.i
+.PHONY : opticalflow.cpp.i
+
+opticalflow.s: opticalflow.cpp.s
+.PHONY : opticalflow.s
+
+# target to generate assembly for a file
+opticalflow.cpp.s:
+	$(MAKE) -f CMakeFiles/opticalflow.dir/build.make CMakeFiles/opticalflow.dir/opticalflow.cpp.s
+.PHONY : opticalflow.cpp.s
 
 person.o: person.cpp.o
 .PHONY : person.o
@@ -250,6 +337,30 @@ video.cpp.s:
 	$(MAKE) -f CMakeFiles/video.dir/build.make CMakeFiles/video.dir/video.cpp.s
 .PHONY : video.cpp.s
 
+videotracking.o: videotracking.cpp.o
+.PHONY : videotracking.o
+
+# target to build an object file
+videotracking.cpp.o:
+	$(MAKE) -f CMakeFiles/videotracking.dir/build.make CMakeFiles/videotracking.dir/videotracking.cpp.o
+.PHONY : videotracking.cpp.o
+
+videotracking.i: videotracking.cpp.i
+.PHONY : videotracking.i
+
+# target to preprocess a source file
+videotracking.cpp.i:
+	$(MAKE) -f CMakeFiles/videotracking.dir/build.make CMakeFiles/videotracking.dir/videotracking.cpp.i
+.PHONY : videotracking.cpp.i
+
+videotracking.s: videotracking.cpp.s
+.PHONY : videotracking.s
+
+# target to generate assembly for a file
+videotracking.cpp.s:
+	$(MAKE) -f CMakeFiles/videotracking.dir/build.make CMakeFiles/videotracking.dir/videotracking.cpp.s
+.PHONY : videotracking.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -258,22 +369,34 @@ help:
 	@echo "... depend"
 	@echo "... detectcolor"
 	@echo "... edit_cache"
+	@echo "... motiontracking"
 	@echo "... optical_flow_demo"
+	@echo "... opticalflow"
 	@echo "... person"
 	@echo "... rebuild_cache"
 	@echo "... video"
+	@echo "... videotracking"
 	@echo "... detectcolor.o"
 	@echo "... detectcolor.i"
 	@echo "... detectcolor.s"
+	@echo "... motiontracking.o"
+	@echo "... motiontracking.i"
+	@echo "... motiontracking.s"
 	@echo "... optical_flow_demo.o"
 	@echo "... optical_flow_demo.i"
 	@echo "... optical_flow_demo.s"
+	@echo "... opticalflow.o"
+	@echo "... opticalflow.i"
+	@echo "... opticalflow.s"
 	@echo "... person.o"
 	@echo "... person.i"
 	@echo "... person.s"
 	@echo "... video.o"
 	@echo "... video.i"
 	@echo "... video.s"
+	@echo "... videotracking.o"
+	@echo "... videotracking.i"
+	@echo "... videotracking.s"
 .PHONY : help
 
 

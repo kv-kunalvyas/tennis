@@ -197,7 +197,7 @@ int main(void)
          * "optical_flow_termination_criteria" is as described above (how long the algorithm should look).
          * "0" means disable enhancements.  (For example, the second array isn't pre-initialized with guesses.)
          */
-        cvCalcOpticalFlowPyrLK(frame1_1C, frame2_1C, pyramid1, pyramid2, frame1_features, frame2_features, number_of_features, optical_flow_window, 5, optical_flow_found_feature, optical_flow_feature_error, optical_flow_termination_criteria, 0 );
+        cvCalcOpticalFlowPyrLK(frame1_1C, frame2_1C, pyramid1, pyramid2, frame1_features, frame2_features, number_of_features, optical_flow_window, 50, optical_flow_found_feature, optical_flow_feature_error, optical_flow_termination_criteria, 0 );
         
         /* For fun (and debugging :)), let's draw the flow field. */
         for(int i = 0; i < number_of_features; i++)
@@ -250,13 +250,16 @@ int main(void)
         /* Now display the image we drew on.  Recall that "Optical Flow" is the name of
          * the window we created above.
          */
+        
+        cvFlip(frame1, frame1, 0);
+        
         cvShowImage("Optical Flow", frame1);
         /* And wait for the user to press a key (so the user has time to look at the image).
          * If the argument is 0 then it waits forever otherwise it waits that number of milliseconds.
          * The return value is the key the user pressed.
          */
         int key_pressed;
-        key_pressed = cvWaitKey(0);
+        key_pressed = cvWaitKey(1);
         
         /* If the users pushes "b" or "B" go back one frame.
          * Otherwise go forward one frame.

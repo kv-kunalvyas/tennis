@@ -88,13 +88,48 @@ clean: CMakeFiles/detectcolor.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/motiontracking.dir
+
+# All Build rule for target.
+CMakeFiles/motiontracking.dir/all:
+	$(MAKE) -f CMakeFiles/motiontracking.dir/build.make CMakeFiles/motiontracking.dir/depend
+	$(MAKE) -f CMakeFiles/motiontracking.dir/build.make CMakeFiles/motiontracking.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/kunal/Developer/tennis/source/CMakeFiles  2
+	@echo "Built target motiontracking"
+.PHONY : CMakeFiles/motiontracking.dir/all
+
+# Include target in all.
+all: CMakeFiles/motiontracking.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/motiontracking.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kunal/Developer/tennis/source/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/motiontracking.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kunal/Developer/tennis/source/CMakeFiles 0
+.PHONY : CMakeFiles/motiontracking.dir/rule
+
+# Convenience name for target.
+motiontracking: CMakeFiles/motiontracking.dir/rule
+.PHONY : motiontracking
+
+# clean rule for target.
+CMakeFiles/motiontracking.dir/clean:
+	$(MAKE) -f CMakeFiles/motiontracking.dir/build.make CMakeFiles/motiontracking.dir/clean
+.PHONY : CMakeFiles/motiontracking.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/motiontracking.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/optical_flow_demo.dir
 
 # All Build rule for target.
 CMakeFiles/optical_flow_demo.dir/all:
 	$(MAKE) -f CMakeFiles/optical_flow_demo.dir/build.make CMakeFiles/optical_flow_demo.dir/depend
 	$(MAKE) -f CMakeFiles/optical_flow_demo.dir/build.make CMakeFiles/optical_flow_demo.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/kunal/Developer/tennis/source/CMakeFiles  2
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/kunal/Developer/tennis/source/CMakeFiles  3
 	@echo "Built target optical_flow_demo"
 .PHONY : CMakeFiles/optical_flow_demo.dir/all
 
@@ -123,13 +158,48 @@ clean: CMakeFiles/optical_flow_demo.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/opticalflow.dir
+
+# All Build rule for target.
+CMakeFiles/opticalflow.dir/all:
+	$(MAKE) -f CMakeFiles/opticalflow.dir/build.make CMakeFiles/opticalflow.dir/depend
+	$(MAKE) -f CMakeFiles/opticalflow.dir/build.make CMakeFiles/opticalflow.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/kunal/Developer/tennis/source/CMakeFiles  4
+	@echo "Built target opticalflow"
+.PHONY : CMakeFiles/opticalflow.dir/all
+
+# Include target in all.
+all: CMakeFiles/opticalflow.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/opticalflow.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kunal/Developer/tennis/source/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/opticalflow.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kunal/Developer/tennis/source/CMakeFiles 0
+.PHONY : CMakeFiles/opticalflow.dir/rule
+
+# Convenience name for target.
+opticalflow: CMakeFiles/opticalflow.dir/rule
+.PHONY : opticalflow
+
+# clean rule for target.
+CMakeFiles/opticalflow.dir/clean:
+	$(MAKE) -f CMakeFiles/opticalflow.dir/build.make CMakeFiles/opticalflow.dir/clean
+.PHONY : CMakeFiles/opticalflow.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/opticalflow.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/person.dir
 
 # All Build rule for target.
 CMakeFiles/person.dir/all:
 	$(MAKE) -f CMakeFiles/person.dir/build.make CMakeFiles/person.dir/depend
 	$(MAKE) -f CMakeFiles/person.dir/build.make CMakeFiles/person.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/kunal/Developer/tennis/source/CMakeFiles  3
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/kunal/Developer/tennis/source/CMakeFiles  5
 	@echo "Built target person"
 .PHONY : CMakeFiles/person.dir/all
 
@@ -164,7 +234,7 @@ clean: CMakeFiles/person.dir/clean
 CMakeFiles/video.dir/all:
 	$(MAKE) -f CMakeFiles/video.dir/build.make CMakeFiles/video.dir/depend
 	$(MAKE) -f CMakeFiles/video.dir/build.make CMakeFiles/video.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/kunal/Developer/tennis/source/CMakeFiles  4
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/kunal/Developer/tennis/source/CMakeFiles  6
 	@echo "Built target video"
 .PHONY : CMakeFiles/video.dir/all
 
@@ -190,6 +260,41 @@ CMakeFiles/video.dir/clean:
 
 # clean rule for target.
 clean: CMakeFiles/video.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/videotracking.dir
+
+# All Build rule for target.
+CMakeFiles/videotracking.dir/all:
+	$(MAKE) -f CMakeFiles/videotracking.dir/build.make CMakeFiles/videotracking.dir/depend
+	$(MAKE) -f CMakeFiles/videotracking.dir/build.make CMakeFiles/videotracking.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/kunal/Developer/tennis/source/CMakeFiles  7
+	@echo "Built target videotracking"
+.PHONY : CMakeFiles/videotracking.dir/all
+
+# Include target in all.
+all: CMakeFiles/videotracking.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/videotracking.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kunal/Developer/tennis/source/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/videotracking.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kunal/Developer/tennis/source/CMakeFiles 0
+.PHONY : CMakeFiles/videotracking.dir/rule
+
+# Convenience name for target.
+videotracking: CMakeFiles/videotracking.dir/rule
+.PHONY : videotracking
+
+# clean rule for target.
+CMakeFiles/videotracking.dir/clean:
+	$(MAKE) -f CMakeFiles/videotracking.dir/build.make CMakeFiles/videotracking.dir/clean
+.PHONY : CMakeFiles/videotracking.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/videotracking.dir/clean
 .PHONY : clean
 
 #=============================================================================

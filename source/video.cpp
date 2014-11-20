@@ -19,6 +19,9 @@ int main(int argc, char* argv[])
 {
     // open the video file for reading
     VideoCapture cap("vid2.mp4");
+    cap.set(CV_CAP_PROP_FRAME_WIDTH, 360);
+    cap.set(CV_CAP_PROP_FRAME_HEIGHT, 240);
+    cap.set(CV_CAP_PROP_FPS, 20);
     
     // if not success, exit program
     while(!cap.isOpened())
@@ -43,9 +46,10 @@ int main(int argc, char* argv[])
             break;
         }
         
+        cout << "Frame per seconds : " << fps << endl;
         imshow("MyVideo", frame); //show the frame in "MyVideo" window
         
-        if(waitKey(30) == 27) //wait for 'esc' key press for 30 ms. If 'esc' key is pressed, break loop
+        if(waitKey(1) == 2) //wait for 'esc' key press for 1 ms. If 'esc' key is pressed, break loop
         {
             cout << "esc key is pressed by user" << endl;
             break;
