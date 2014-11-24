@@ -116,6 +116,19 @@ detectcolor/fast:
 .PHONY : detectcolor/fast
 
 #=============================================================================
+# Target rules for targets named lkdemo
+
+# Build rule for target.
+lkdemo: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 lkdemo
+.PHONY : lkdemo
+
+# fast build rule for target.
+lkdemo/fast:
+	$(MAKE) -f CMakeFiles/lkdemo.dir/build.make CMakeFiles/lkdemo.dir/build
+.PHONY : lkdemo/fast
+
+#=============================================================================
 # Target rules for targets named motiontracking
 
 # Build rule for target.
@@ -216,6 +229,30 @@ detectcolor.s: detectcolor.cpp.s
 detectcolor.cpp.s:
 	$(MAKE) -f CMakeFiles/detectcolor.dir/build.make CMakeFiles/detectcolor.dir/detectcolor.cpp.s
 .PHONY : detectcolor.cpp.s
+
+lkdemo.o: lkdemo.cpp.o
+.PHONY : lkdemo.o
+
+# target to build an object file
+lkdemo.cpp.o:
+	$(MAKE) -f CMakeFiles/lkdemo.dir/build.make CMakeFiles/lkdemo.dir/lkdemo.cpp.o
+.PHONY : lkdemo.cpp.o
+
+lkdemo.i: lkdemo.cpp.i
+.PHONY : lkdemo.i
+
+# target to preprocess a source file
+lkdemo.cpp.i:
+	$(MAKE) -f CMakeFiles/lkdemo.dir/build.make CMakeFiles/lkdemo.dir/lkdemo.cpp.i
+.PHONY : lkdemo.cpp.i
+
+lkdemo.s: lkdemo.cpp.s
+.PHONY : lkdemo.s
+
+# target to generate assembly for a file
+lkdemo.cpp.s:
+	$(MAKE) -f CMakeFiles/lkdemo.dir/build.make CMakeFiles/lkdemo.dir/lkdemo.cpp.s
+.PHONY : lkdemo.cpp.s
 
 motiontracking.o: motiontracking.cpp.o
 .PHONY : motiontracking.o
@@ -369,6 +406,7 @@ help:
 	@echo "... depend"
 	@echo "... detectcolor"
 	@echo "... edit_cache"
+	@echo "... lkdemo"
 	@echo "... motiontracking"
 	@echo "... optical_flow_demo"
 	@echo "... opticalflow"
@@ -379,6 +417,9 @@ help:
 	@echo "... detectcolor.o"
 	@echo "... detectcolor.i"
 	@echo "... detectcolor.s"
+	@echo "... lkdemo.o"
+	@echo "... lkdemo.i"
+	@echo "... lkdemo.s"
 	@echo "... motiontracking.o"
 	@echo "... motiontracking.i"
 	@echo "... motiontracking.s"

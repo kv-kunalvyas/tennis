@@ -24,3 +24,7 @@ target_link_libraries( optical_flow_demo ${OpenCV_LIBS} )
 
 add_executable( videotracking videotracking.cpp )
 target_link_libraries( videotracking ${OpenCV_LIBS} )
+
+add_executable( lkdemo lkdemo.cpp )
+target_link_libraries( lkdemo ${OpenCV_LIBS} )
+
