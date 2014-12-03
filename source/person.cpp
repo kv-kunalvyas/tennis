@@ -6,13 +6,15 @@ using namespace cv;
 
 int main (int argc, const char * argv[])
 {
-    VideoCapture cap("vid1.mp4");
+    VideoCapture cap("vid4.mp4");
     cap.set(CV_CAP_PROP_FPS, 120);
     if (!cap.isOpened())
         return -1;
     
     Mat img;
     HOGDescriptor hog;
+    CascadeClassifier cascade;
+    cascade.load("haarcascade_upperbody.xml");
     hog.setSVMDetector(HOGDescriptor::getDefaultPeopleDetector());
     
     namedWindow("video capture", CV_WINDOW_AUTOSIZE);
@@ -28,12 +30,14 @@ int main (int argc, const char * argv[])
         //rectangle(img, Point(160,140), Point(480,300), 255, 0, 255);
         
         vector<Rect> found;
-        hog.detectMultiScale(roi, found, 0, Size(2,2), Size(1,1), 5, 1);
+        cascade.detectMultiScale(roi, found, 1.1, 3, 0, cvSize(16, 16), cvSize(64, 64));
+        //hog.detectMultiScale(roi, found, 1.05, Size(4,4), Size(32,32), 1, 0);
         
         for (size_t i = 0; i < found.size(); i++)
         {
             Rect r = found[i];
             rectangle(roi, r.tl(), r.br(), CV_RGB(0, 255, 0), 1);
+            
         }
         
         imshow("video capture", img);

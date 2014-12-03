@@ -16,7 +16,7 @@ static void help()
 int main(int argc, char** argv)
 {
     
-    VideoCapture cap("vid2.mp4");
+    VideoCapture cap("vid4.mp4");
     if (!cap.isOpened())
         return -1;
     
