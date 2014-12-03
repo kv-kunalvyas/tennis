@@ -28,3 +28,6 @@ target_link_libraries( videotracking ${OpenCV_LIBS} )
 add_executable( lkdemo lkdemo.cpp )
 target_link_libraries( lkdemo ${OpenCV_LIBS} )
 
+add_executable( circles circles.cpp )
+target_link_libraries( circles ${OpenCV_LIBS} )
+

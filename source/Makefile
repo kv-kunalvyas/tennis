@@ -103,6 +103,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named circles
+
+# Build rule for target.
+circles: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 circles
+.PHONY : circles
+
+# fast build rule for target.
+circles/fast:
+	$(MAKE) -f CMakeFiles/circles.dir/build.make CMakeFiles/circles.dir/build
+.PHONY : circles/fast
+
+#=============================================================================
 # Target rules for targets named detectcolor
 
 # Build rule for target.
@@ -205,6 +218,30 @@ videotracking: cmake_check_build_system
 videotracking/fast:
 	$(MAKE) -f CMakeFiles/videotracking.dir/build.make CMakeFiles/videotracking.dir/build
 .PHONY : videotracking/fast
+
+circles.o: circles.cpp.o
+.PHONY : circles.o
+
+# target to build an object file
+circles.cpp.o:
+	$(MAKE) -f CMakeFiles/circles.dir/build.make CMakeFiles/circles.dir/circles.cpp.o
+.PHONY : circles.cpp.o
+
+circles.i: circles.cpp.i
+.PHONY : circles.i
+
+# target to preprocess a source file
+circles.cpp.i:
+	$(MAKE) -f CMakeFiles/circles.dir/build.make CMakeFiles/circles.dir/circles.cpp.i
+.PHONY : circles.cpp.i
+
+circles.s: circles.cpp.s
+.PHONY : circles.s
+
+# target to generate assembly for a file
+circles.cpp.s:
+	$(MAKE) -f CMakeFiles/circles.dir/build.make CMakeFiles/circles.dir/circles.cpp.s
+.PHONY : circles.cpp.s
 
 detectcolor.o: detectcolor.cpp.o
 .PHONY : detectcolor.o
@@ -404,6 +441,7 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... circles"
 	@echo "... detectcolor"
 	@echo "... edit_cache"
 	@echo "... lkdemo"
@@ -414,6 +452,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... video"
 	@echo "... videotracking"
+	@echo "... circles.o"
+	@echo "... circles.i"
+	@echo "... circles.s"
 	@echo "... detectcolor.o"
 	@echo "... detectcolor.i"
 	@echo "... detectcolor.s"

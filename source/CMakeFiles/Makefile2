@@ -53,13 +53,48 @@ CMAKE_SOURCE_DIR = /Users/kunal/Developer/tennis/Source
 CMAKE_BINARY_DIR = /Users/kunal/Developer/tennis/source
 
 #=============================================================================
+# Target rules for target CMakeFiles/circles.dir
+
+# All Build rule for target.
+CMakeFiles/circles.dir/all:
+	$(MAKE) -f CMakeFiles/circles.dir/build.make CMakeFiles/circles.dir/depend
+	$(MAKE) -f CMakeFiles/circles.dir/build.make CMakeFiles/circles.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/kunal/Developer/tennis/source/CMakeFiles  1
+	@echo "Built target circles"
+.PHONY : CMakeFiles/circles.dir/all
+
+# Include target in all.
+all: CMakeFiles/circles.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/circles.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kunal/Developer/tennis/source/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/circles.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kunal/Developer/tennis/source/CMakeFiles 0
+.PHONY : CMakeFiles/circles.dir/rule
+
+# Convenience name for target.
+circles: CMakeFiles/circles.dir/rule
+.PHONY : circles
+
+# clean rule for target.
+CMakeFiles/circles.dir/clean:
+	$(MAKE) -f CMakeFiles/circles.dir/build.make CMakeFiles/circles.dir/clean
+.PHONY : CMakeFiles/circles.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/circles.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/detectcolor.dir
 
 # All Build rule for target.
 CMakeFiles/detectcolor.dir/all:
 	$(MAKE) -f CMakeFiles/detectcolor.dir/build.make CMakeFiles/detectcolor.dir/depend
 	$(MAKE) -f CMakeFiles/detectcolor.dir/build.make CMakeFiles/detectcolor.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/kunal/Developer/tennis/source/CMakeFiles  1
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/kunal/Developer/tennis/source/CMakeFiles  2
 	@echo "Built target detectcolor"
 .PHONY : CMakeFiles/detectcolor.dir/all
 
@@ -94,7 +129,7 @@ clean: CMakeFiles/detectcolor.dir/clean
 CMakeFiles/lkdemo.dir/all:
 	$(MAKE) -f CMakeFiles/lkdemo.dir/build.make CMakeFiles/lkdemo.dir/depend
 	$(MAKE) -f CMakeFiles/lkdemo.dir/build.make CMakeFiles/lkdemo.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/kunal/Developer/tennis/source/CMakeFiles  2
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/kunal/Developer/tennis/source/CMakeFiles  3
 	@echo "Built target lkdemo"
 .PHONY : CMakeFiles/lkdemo.dir/all
 
@@ -129,7 +164,7 @@ clean: CMakeFiles/lkdemo.dir/clean
 CMakeFiles/motiontracking.dir/all:
 	$(MAKE) -f CMakeFiles/motiontracking.dir/build.make CMakeFiles/motiontracking.dir/depend
 	$(MAKE) -f CMakeFiles/motiontracking.dir/build.make CMakeFiles/motiontracking.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/kunal/Developer/tennis/source/CMakeFiles  3
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/kunal/Developer/tennis/source/CMakeFiles  4
 	@echo "Built target motiontracking"
 .PHONY : CMakeFiles/motiontracking.dir/all
 
@@ -164,7 +199,7 @@ clean: CMakeFiles/motiontracking.dir/clean
 CMakeFiles/optical_flow_demo.dir/all:
 	$(MAKE) -f CMakeFiles/optical_flow_demo.dir/build.make CMakeFiles/optical_flow_demo.dir/depend
 	$(MAKE) -f CMakeFiles/optical_flow_demo.dir/build.make CMakeFiles/optical_flow_demo.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/kunal/Developer/tennis/source/CMakeFiles  4
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/kunal/Developer/tennis/source/CMakeFiles  5
 	@echo "Built target optical_flow_demo"
 .PHONY : CMakeFiles/optical_flow_demo.dir/all
 
@@ -199,7 +234,7 @@ clean: CMakeFiles/optical_flow_demo.dir/clean
 CMakeFiles/opticalflow.dir/all:
 	$(MAKE) -f CMakeFiles/opticalflow.dir/build.make CMakeFiles/opticalflow.dir/depend
 	$(MAKE) -f CMakeFiles/opticalflow.dir/build.make CMakeFiles/opticalflow.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/kunal/Developer/tennis/source/CMakeFiles  5
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/kunal/Developer/tennis/source/CMakeFiles  6
 	@echo "Built target opticalflow"
 .PHONY : CMakeFiles/opticalflow.dir/all
 
@@ -234,7 +269,7 @@ clean: CMakeFiles/opticalflow.dir/clean
 CMakeFiles/person.dir/all:
 	$(MAKE) -f CMakeFiles/person.dir/build.make CMakeFiles/person.dir/depend
 	$(MAKE) -f CMakeFiles/person.dir/build.make CMakeFiles/person.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/kunal/Developer/tennis/source/CMakeFiles  6
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/kunal/Developer/tennis/source/CMakeFiles  7
 	@echo "Built target person"
 .PHONY : CMakeFiles/person.dir/all
 
@@ -269,7 +304,7 @@ clean: CMakeFiles/person.dir/clean
 CMakeFiles/video.dir/all:
 	$(MAKE) -f CMakeFiles/video.dir/build.make CMakeFiles/video.dir/depend
 	$(MAKE) -f CMakeFiles/video.dir/build.make CMakeFiles/video.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/kunal/Developer/tennis/source/CMakeFiles  7
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/kunal/Developer/tennis/source/CMakeFiles  8
 	@echo "Built target video"
 .PHONY : CMakeFiles/video.dir/all
 
@@ -304,7 +339,7 @@ clean: CMakeFiles/video.dir/clean
 CMakeFiles/videotracking.dir/all:
 	$(MAKE) -f CMakeFiles/videotracking.dir/build.make CMakeFiles/videotracking.dir/depend
 	$(MAKE) -f CMakeFiles/videotracking.dir/build.make CMakeFiles/videotracking.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/kunal/Developer/tennis/source/CMakeFiles  8
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/kunal/Developer/tennis/source/CMakeFiles  9
 	@echo "Built target videotracking"
 .PHONY : CMakeFiles/videotracking.dir/all
 

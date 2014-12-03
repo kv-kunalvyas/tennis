@@ -48,6 +48,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/circles.dir/DependInfo.cmake"
   "CMakeFiles/detectcolor.dir/DependInfo.cmake"
   "CMakeFiles/lkdemo.dir/DependInfo.cmake"
   "CMakeFiles/motiontracking.dir/DependInfo.cmake"
