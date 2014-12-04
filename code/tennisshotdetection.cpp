@@ -156,9 +156,9 @@ ShotType determineShotType(vector<Point> positions, Rect playerPosition) {
 	
 	// ball left of player = backhand
 	if ( ballPosition.x < xPlayerCoordinate )
-		return FOREHAND;
+		return BACKHAND;
 	
-	return BACKHAND;
+	return FOREHAND;
 }
 
 int main(int argc, char** argv)

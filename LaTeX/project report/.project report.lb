@@ -11,29 +11,31 @@ p4
 ((lp5
 S'hyperref'
 p6
-aS'fontspec'
-p7
-aS'graphicx'
-p8
 aS'titlesec'
+p7
+aS'fontspec'
+p8
+aS'multirow'
 p9
 aS'fontenc'
 p10
-atp11
-Rp12
+aS'graphicx'
+p11
+atp12
+Rp13
 sS'files_with_guttermarks'
-p13
+p14
 g4
-((lp14
+((lp15
 S'project report.tex'
-p15
-aS'/Users/kunal/Developer/tennis/LaTeX/project report/project report.tex'
 p16
-aS'/Users/kunal/Developer/tennis/LaTeX/project report/./project report.tex'
+aS'/Users/kunal/Developer/tennis/LaTeX/project report/project report.tex'
 p17
-atp18
-Rp19
+aS'/Users/kunal/Developer/tennis/LaTeX/project report/./project report.tex'
+p18
+atp19
+Rp20
 sS'synctex'
-p20
+p21
 I01
 s.
