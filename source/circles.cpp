@@ -16,14 +16,14 @@ static void help()
 int main(int argc, char** argv)
 {
     
-    VideoCapture cap("vid4.mp4");
+    VideoCapture cap("vid5.mp4");
     if (!cap.isOpened())
         return -1;
     
     namedWindow("video capture", CV_WINDOW_AUTOSIZE);
     namedWindow("video capture2", CV_WINDOW_AUTOSIZE);
     Mat roi2;
-    cap>>roi2;
+    cap >> roi2;
     Mat img2 = roi2(Rect(160, 100, 320, 200));
     cvtColor(img2, img2, COLOR_BGR2GRAY);
     while (true)
