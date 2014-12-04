@@ -46,7 +46,7 @@ Rect person(Mat img){
         //imshow("video capture", img);
         //if (waitKey(2) >= 0){
         //    break;
-        }
+        
     //}
     //return 0;
 }

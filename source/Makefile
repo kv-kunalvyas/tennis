@@ -181,19 +181,6 @@ opticalflow/fast:
 .PHONY : opticalflow/fast
 
 #=============================================================================
-# Target rules for targets named person
-
-# Build rule for target.
-person: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 person
-.PHONY : person
-
-# fast build rule for target.
-person/fast:
-	$(MAKE) -f CMakeFiles/person.dir/build.make CMakeFiles/person.dir/build
-.PHONY : person/fast
-
-#=============================================================================
 # Target rules for targets named video
 
 # Build rule for target.
@@ -363,30 +350,6 @@ opticalflow.cpp.s:
 	$(MAKE) -f CMakeFiles/opticalflow.dir/build.make CMakeFiles/opticalflow.dir/opticalflow.cpp.s
 .PHONY : opticalflow.cpp.s
 
-person.o: person.cpp.o
-.PHONY : person.o
-
-# target to build an object file
-person.cpp.o:
-	$(MAKE) -f CMakeFiles/person.dir/build.make CMakeFiles/person.dir/person.cpp.o
-.PHONY : person.cpp.o
-
-person.i: person.cpp.i
-.PHONY : person.i
-
-# target to preprocess a source file
-person.cpp.i:
-	$(MAKE) -f CMakeFiles/person.dir/build.make CMakeFiles/person.dir/person.cpp.i
-.PHONY : person.cpp.i
-
-person.s: person.cpp.s
-.PHONY : person.s
-
-# target to generate assembly for a file
-person.cpp.s:
-	$(MAKE) -f CMakeFiles/person.dir/build.make CMakeFiles/person.dir/person.cpp.s
-.PHONY : person.cpp.s
-
 video.o: video.cpp.o
 .PHONY : video.o
 
@@ -448,7 +411,6 @@ help:
 	@echo "... motiontracking"
 	@echo "... optical_flow_demo"
 	@echo "... opticalflow"
-	@echo "... person"
 	@echo "... rebuild_cache"
 	@echo "... video"
 	@echo "... videotracking"
@@ -470,9 +432,6 @@ help:
 	@echo "... opticalflow.o"
 	@echo "... opticalflow.i"
 	@echo "... opticalflow.s"
-	@echo "... person.o"
-	@echo "... person.i"
-	@echo "... person.s"
 	@echo "... video.o"
 	@echo "... video.i"
 	@echo "... video.s"

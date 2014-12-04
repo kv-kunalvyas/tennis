@@ -263,48 +263,13 @@ clean: CMakeFiles/opticalflow.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/person.dir
-
-# All Build rule for target.
-CMakeFiles/person.dir/all:
-	$(MAKE) -f CMakeFiles/person.dir/build.make CMakeFiles/person.dir/depend
-	$(MAKE) -f CMakeFiles/person.dir/build.make CMakeFiles/person.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/kunal/Developer/tennis/source/CMakeFiles  7
-	@echo "Built target person"
-.PHONY : CMakeFiles/person.dir/all
-
-# Include target in all.
-all: CMakeFiles/person.dir/all
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/person.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kunal/Developer/tennis/source/CMakeFiles 1
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/person.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kunal/Developer/tennis/source/CMakeFiles 0
-.PHONY : CMakeFiles/person.dir/rule
-
-# Convenience name for target.
-person: CMakeFiles/person.dir/rule
-.PHONY : person
-
-# clean rule for target.
-CMakeFiles/person.dir/clean:
-	$(MAKE) -f CMakeFiles/person.dir/build.make CMakeFiles/person.dir/clean
-.PHONY : CMakeFiles/person.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/person.dir/clean
-.PHONY : clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/video.dir
 
 # All Build rule for target.
 CMakeFiles/video.dir/all:
 	$(MAKE) -f CMakeFiles/video.dir/build.make CMakeFiles/video.dir/depend
 	$(MAKE) -f CMakeFiles/video.dir/build.make CMakeFiles/video.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/kunal/Developer/tennis/source/CMakeFiles  8
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/kunal/Developer/tennis/source/CMakeFiles  7
 	@echo "Built target video"
 .PHONY : CMakeFiles/video.dir/all
 
@@ -339,7 +304,7 @@ clean: CMakeFiles/video.dir/clean
 CMakeFiles/videotracking.dir/all:
 	$(MAKE) -f CMakeFiles/videotracking.dir/build.make CMakeFiles/videotracking.dir/depend
 	$(MAKE) -f CMakeFiles/videotracking.dir/build.make CMakeFiles/videotracking.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/kunal/Developer/tennis/source/CMakeFiles  9
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/kunal/Developer/tennis/source/CMakeFiles  8
 	@echo "Built target videotracking"
 .PHONY : CMakeFiles/videotracking.dir/all
 
