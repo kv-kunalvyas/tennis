@@ -117,6 +117,7 @@
 	One such approach was to use just the points from the Hough Circles and then using maximum and average of x-coordinate detected values to determine the shot. This had limitations, because it wasn't capable of detecting for all scenarios.\\
 	Other way our idea can be improved is by using a machine learning method to train sample of tennis players hitting the shots, because that is where our program performs poorly. Infact, sideways faces is one of the limitations of the player detection approach we have followed.\\
 	We also tried to track the detected player positions using Lucas Kanade method for optical flow. But that failed too because it didn't track all points successfully and hence it was not reliable enough.\\
+	We can also use a voting system to determine the correct shot using more of the previously tracked ball positions.\\
 	There are many more improvements and ideas that we can implement to make the performance and accuracy better, but given the circumstances, we were not able to incorporate in this project.\\
 	\subsection{Performance:}
     \begin{figure}[h]
